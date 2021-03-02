@@ -1,0 +1,75 @@
+// clase humano 
+class humano {
+    var nombre:String
+
+    func Saludar(nombre:String)  {
+        
+       return (nombre,"mucho gusto ") 
+    }
+
+    func Caminar(pasos:Int) {
+        self.Caminar=pasos
+        let str2 = String(pasos)
+        return str2
+    }
+}
+// iniciar 
+var eric= humano()
+eric.Saludar("eric")
+eric.Caminar(pasos:10)
+
+print("Saludo"\(eric.Saludar))
+print("camino\(eric.Caminar) pasos")
+
+// structura
+struct pantalla {
+    var alto:Int
+    var ancho:Int
+    init(alto:Int,ancho:Int){
+        self.alto=alto
+        self.ancho=ancho
+    }
+
+    fun reso()->(Int,Int){
+        return (self.alto,self.ancho)
+    }
+}
+var tele=pantalla(alto:10,ancho:10)
+tele.reso()
+
+// extension
+extension Int {
+var segundos:Int{
+    return self*3600
+}
+
+  var dias:Int{
+
+switch self{
+ case 1:
+        print("Domingo")
+ case 2:
+        print("Lunes")
+ case 3:
+        print("MArtes")
+ case 4:
+        print("Miercoles")
+ case 5:
+        print("Jueves")
+ case 6:
+        print("Viernes")
+ case 7:
+        print("Sabado")
+
+
+  }  
+}
+//horas a segundos
+7.segundos
+5.dias
+
+//op
+var  ciu = ["GDL":120, "PUE":300, "MTY":100, "CDMX":200]
+var existe:Int?
+existe=ciu["DF"]
+existe=ciu["GDL"]
