@@ -1,25 +1,35 @@
-// clase humano 
+import Cocoa
+
+var str = "Hello, playground"
+
+// clase humano
 class humano {
-    var nombre:String
+   // var edad:Int
+var nombre:String
+   
+    init(nombre:String) {
+        self.nombre=nombre
+    }
 
     func Saludar(nombre:String)  {
         
-       return (nombre,"mucho gusto ") 
+    (self.nombre,"mucho gusto ")
     }
 
     func Caminar(pasos:Int) {
-        self.Caminar=pasos
-        let str2 = String(pasos)
-        return str2
+       // var s =
+       //var str2 =
+      (  "pasos dados",String(pasos))
+    
     }
 }
-// iniciar 
-var eric= humano()
-eric.Saludar("eric")
+// iniciar
+var eric = humano(nombre: "el cacas")
+eric.Saludar(nombre: "El popos")
 eric.Caminar(pasos:10)
 
-print("Saludo"\(eric.Saludar))
-print("camino\(eric.Caminar) pasos")
+print("Saludo",(eric.Saludar))
+print("camino",(eric.Caminar)," pasos")
 
 // structura
 struct pantalla {
@@ -30,7 +40,7 @@ struct pantalla {
         self.ancho=ancho
     }
 
-    fun reso()->(Int,Int){
+    func reso()->(Int,Int){
         return (self.alto,self.ancho)
     }
 }
@@ -43,30 +53,36 @@ var segundos:Int{
     return self*3600
 }
 
-  var dias:Int{
+   
 
-switch self{
- case 1:
-        print("Domingo")
- case 2:
-        print("Lunes")
- case 3:
-        print("MArtes")
- case 4:
-        print("Miercoles")
- case 5:
-        print("Jueves")
- case 6:
-        print("Viernes")
- case 7:
-        print("Sabado")
-
-
-  }  
 }
+    
+extension String {
+    	
+    var diasele:String{
+        switch self {
+        case "Domingo":
+     return String(1)
+            case "Lunes":
+            return String(2)
+            case "MArtes":
+            return String(3)
+            case "Miercoles":
+            return String(4)
+            case "Jueves":
+            return String(5)
+            case "Viernes":
+            return String(6)
+            case "Sabado":
+            return String(7)
+        default:
+            return "Ese no es un dia "
+        }
+    }
+     }
 //horas a segundos
 7.segundos
-5.dias
+"Sabado".diasele
 
 //op
 var  ciu = ["GDL":120, "PUE":300, "MTY":100, "CDMX":200]
